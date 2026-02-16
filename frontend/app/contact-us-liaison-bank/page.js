@@ -1,16 +1,9 @@
-// import Image from "next/image";
+import Image from "next/image";
 
-export default function Home() {
+export default function ContactusLiaisonbankPage() {
   return (
-    <> 
-    {/* <Image
-      src="/next.svg"
-      alt="Next.js logo"
-      width={100}
-      height={20}
-      priority
-    /> */}
-      Home
+    <>
+    Contact
       <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
         <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black">
           To get started, edit the page.js file.
@@ -46,3 +39,4 @@ export default function Home() {
     </>
   );
 }
+
