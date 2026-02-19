@@ -81,38 +81,7 @@ export default function Footer() {
         </div>
 
         <div className="max-w-7xl mx-auto border-t border-gray-800 py-4 text-center text-white-500 text-md">
-          
           © 2026 by  Liaison Bank | All Rights Reserved
-          <div className="textwidget custom-html-widget">
-            <ul className="list-inline ps-0 ms-0 footer-social social-icons">
-            <li className="list-inline-item">
-              <a href="#">
-                <i className="flaticon-facebook-app-symbol"></i>
-              </a>
-            </li>
-            <li className="list-inline-item">
-              <a href="#">
-                <i className="flaticon-dribble"></i>
-              </a>
-            </li>
-            <li className="list-inline-item">
-              <a href="#">
-                <i className="flaticon-instagram"></i>
-              </a>
-            </li>
-            <li className="list-inline-item">
-              <a href="#">
-                <i className="flaticon-twitter-2"></i>
-              </a>
-            </li>
-            <li className="list-inline-item">
-              <a href="#">
-                <i className="flaticon-linkedin-1"></i>
-              </a>
-            </li>
-          </ul>
-          </div>
-
         </div>
         <ScrollToTopButton />
       </footer>

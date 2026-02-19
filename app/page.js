@@ -1,9 +1,14 @@
 "use client";
 // import Image from "next/image";
+import Link from 'next/link'
 import Image from 'next/image'
 import useBodyClass from '@/components/useBodyClass'; // Adjust path as needed
 import Waves from "@/components/waves";
+import ImageWave from '@/components/ImageWave';
+import ExpertImg from '@/components/expertImg';
 import smallLogo from "@/assets/images/shape-small-1-1.png"
+import welcomeImg from "@/assets/images/group.jpg"
+import ceoImg from "@/assets/images/deva-CEO.jpg"
 
 const Home = () => {
   useBodyClass('home');
@@ -17,7 +22,8 @@ const Home = () => {
         </div>
         <Waves />
       </div>
-      <section className="position-relative">
+
+      <section className="welcome">
         <div className="smallObject">
           <Image
             src={smallLogo}
@@ -28,58 +34,108 @@ const Home = () => {
             priority
           />
         </div>
-        <div className="container mx-auto p-4">
+        <div className="container mx-auto p-5 bg-white">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-
-            <div className="bg-blue-200 p-4 rounded">
-              <h2 className="text-xl font-semibold mb-2">Column 1</h2>
-              <p>This column will take up the full width on small screens and 50% on medium screens and above.</p>
+            <div className="p-4 d-flex justify-content-end">
+              <Image
+                src={welcomeImg}
+                width={500}
+                height={550}
+                alt=""
+                priority
+              />
             </div>
-
-            <div className="bg-green-200 p-4 rounded">
-              <h2 className="text-xl font-semibold mb-2">Column 2</h2>
-              <p>This column behaves the same way, creating a perfect two-column fluid layout.</p>
+            <div className=" p-4">
+              <div className='section-title'>
+                <h6>Welcome to, Liaison Bank  </h6>
+                <h3>Your Partner in
+                  <span className='theme-color'>Licensing</span> and
+                  <span className='theme-color'>Liaisoning</span>
+                </h3>
+              </div>
+              <div className='home-abt'>
+                {/* <h2 className="text-xl font-semibold mb-2">Column 2</h2> */}
+                <p>We take care of the intricacies and uncertainties, allowing you to redirect your energy towards your core priorities and business objectives. This ensures a smoother and more efficient experience, providing you with the peace of mind to concentrate on what matters most to your success.</p>
+                <p>Our commitment is to deliver a seamless and reliable experience that brings clarity, confidence, and peace of mind. With our expertise supporting your operations, you can move forward with assurance—concentrating on strategic growth and achieving your business objectives while we handle the rest.</p>
+                <hr />
+                <h5 className='ceo-slogan'>&quot;It&apos;s not about waiting for things to fall into place, it&apos;s about what you make of yourself.&quot;</h5>
+              </div>
+              <div className='d-flex flex-wrap justify-content-between align-items-center'>
+                <div className='author-meta d-flex flex-wrap align-items-center'>
+                  <div className='col-auto author-img'>
+                    <Image
+                      src={ceoImg}
+                      width={60}
+                      height={60}
+                      className='rounded-circle'
+                      alt=""
+                      priority
+                    />
+                  </div>
+                  <div className='col-auto'>
+                    <h4 className="author-title">Deva Biradar</h4>
+                    <span className="author-desc">Chief Executive Officer</span>
+                  </div>
+                </div>
+                <Link href="/" className="themeht-btn primary-btn d-flex align-item-center mr-2">CEO&apos;s DESK
+                  <svg xmlns="http://www.w3.org" width="22" height="22" fill="currentColor" className="bi bi-arrow-right" viewBox="0 0 16 16">
+                    <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
+                  </svg>
+                </Link>
+              </div>
             </div>
           </div>
         </div>
-      </section >
+      </section>
 
-      <div className="max-w-7xl mx-auto px-4 py-10">
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
 
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      <section className="ourexpertise">
+        <div className="container mx-auto py-4">
+          <div className="section-title">
+            <h3>Our Expertise</h3>
+            <h5>We bring our expertise to multiple sectors and create customised solutions for diverse set of business needs.</h5>
+          </div>
+        
         </div>
-      </div>
-      
+      </section>
+
+
+      <section className="weprovide">
+        <div className="container mx-auto  py-4 bg-white">
+          <div className="section-title">
+            <h3>What we Provide ?</h3>
+          </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="d-flex justify-content-end">
+              <div className="shape-img-bg">
+                  <ExpertImg />
+                  <div className="img-bg-shape">
+                    <ImageWave />
+                  </div>
+              </div>
+            </div>
+            <div className="provision p-4">
+              <ul className='list-unstyled list-icon style-1'>
+                <li>Asset Management & Regularization</li>
+                <li>Licence Procurement</li>
+                <li>Tailor Made Permissions</li>
+                <li>Energy Savings</li>
+                <li>Compliance For SME&apos;s</li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="ourclients">
+        <div className="container mx-auto  py-4 bg-white">
+          <div className="section-title">
+            <h3>Our Latest Clients</h3>
+          </div>
+        </div>
+      </section>
+
     </>
   );
 };

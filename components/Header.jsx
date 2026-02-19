@@ -3,8 +3,6 @@
 import { useEffect, useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { usePathname } from "next/navigation"
-import logo from "@/assets/images/logo_grey.png"
 import logoScrolled from "@/assets/images/logo.png"
 import { navLinks } from '@/static/menus'
 
@@ -13,6 +11,10 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
   const [openSubmenu, setOpenSubmenu] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isActive, setIsActive] = useState(false);
+
+  const openPopup = () => setIsActive(true);
+  const closePopup = () => setIsActive(false);
 
   const openNav = () => setIsOpen(true);
   const closeNav = () => setIsOpen(false);
@@ -85,6 +87,9 @@ export default function Header() {
                     )}
                   </li>
                 ))}
+                <li>
+                <button className="action-btn-search text-white" onClick={openPopup}><i className="fa fa-search"></i> Search</button>
+                </li>
               </ul>
             </div>
 
@@ -229,6 +234,13 @@ export default function Header() {
           />
         )} */}
       </header>
+      <div className={`search-popup ${isActive ? 'active' : 'inActive'}`}>
+        <button type="button" className="search-popup-close" onClick={closePopup}><i className="fas fa-times"></i>✕</button>
+        <form className="search-popup-form">
+          <input type="text" className="search-popup-form-input" placeholder="Type Words Then Enter" />
+          <button className="search-popup-btn"><i className="icon-search"></i></button>
+        </form>
+      </div>
     </>
   )
 }
