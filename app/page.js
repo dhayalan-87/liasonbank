@@ -12,10 +12,14 @@ import ceoImg from "@/assets/images/deva-CEO.jpg"
 import rightTick from "@/assets/images/rightTick.svg"
 import ClientScroller from "@/components/ClientScroller"
 import useFancybox from '@/components/useFancybox';
+import TestimonialInfinite from '@/components/TestimonialInfinite';
 
 const Home = () => {
   useBodyClass('home');
-  const fancyboxRef = useFancybox();
+  const fancyboxRef = useFancybox({
+    // This object disables the thumbnails entirely
+    Thumbs: false,
+  });
 
   return (
     <>
@@ -28,10 +32,10 @@ const Home = () => {
       </div>
 
       <section className="welcome">
-        <div className="container mx-auto p-5 bg-white">
+        <div className="container mx-auto py-5 bg-white">
           <div className="smallObject">
             <Image
-              src={smallLogo}
+              src={smallLogo} 
               alt=""
               width={257}
               height={257}
@@ -94,7 +98,7 @@ const Home = () => {
 
 
       <section className="ourexpertise">
-        <div className="container mx-auto py-4">
+        <div className="container mx-auto py-5">
           <div className="section-title">
             <h3>Our Expertise</h3>
             <h5>We bring our expertise to multiple sectors and create customised solutions for diverse set of business needs.</h5>
@@ -105,11 +109,11 @@ const Home = () => {
 
 
       <section className="weprovide">
-        <div className="container mx-auto  py-4 bg-white">
+        <div className="container mx-auto  py-5 bg-white">
           <div className="section-title">
             <h3>What we Provide ?</h3>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 py-4">
             <div className="d-flex justify-content-end">
               <div className="shape-img-bg">
                 <ExpertImg />
@@ -158,7 +162,7 @@ const Home = () => {
       </section>
 
       <section className="ourclients">
-        <div className="container-fluid mx-auto px-0 py-4 bg-white">
+        <div className="container-fluid mx-auto px-0 py-5 bg-white">
           <div className="section-title">
             <h3>Our Latest Clients</h3>
           </div>
@@ -169,7 +173,7 @@ const Home = () => {
       </section>
 
       <section className="awardscertification">
-        <div className="container mx-auto py-4 bg-white">
+        <div className="container mx-auto py-5 bg-white">
           <div className="section-title">
             <h3>Awards & Certifications</h3>
           </div>
@@ -245,7 +249,7 @@ const Home = () => {
                   data-caption="Sunbeam Gorukrupa Developers"
                 >
                   <Image
-                    src="/certificate/certificate1.webp"
+                    src="/certificate/sunbeamn.webp"
                     width={400}
                     height={200}
                     alt=""
@@ -260,13 +264,11 @@ const Home = () => {
       </section>
 
       <section className="clientfeedback">
-        <div className="container mx-auto  py-4 bg-white">
+        <div className="container-fluid mx-auto px-0 bg-white">
           <div className="section-title">
-            <h3>Client Feedback</h3>
+            <h3>Client Feedback <span>& Testimonial</span></h3>
           </div>
-          <div>
-
-          </div>
+          <TestimonialInfinite />
         </div>
       </section>
 

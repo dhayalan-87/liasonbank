@@ -100,6 +100,15 @@ export default function Header() {
             >
               {isOpen ? "X" : "Menu"}
             </button>
+            <button
+              className={`hamburger md:hidden ${isOpen ? "active" : ""}`}
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle Menu"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
           </nav>
         </div>
 
