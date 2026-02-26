@@ -4,7 +4,8 @@ import { useEffect, useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import logoScrolled from "@/assets/images/logo.png"
-import { navLinks } from '@/static/menus'
+import { navLinks } from '@/static/menus' 
+import  MenuIcon  from '@/components/MenuIcon'
 
 export default function Header() {
   const [isSticky, setIsSticky] = useState(false)
@@ -54,7 +55,7 @@ export default function Header() {
             </Link>
 
             {/* ================= DESKTOP MENU ================= */}
-            <div className="hidden md:flex">
+            <div className="hidden lg:flex">
               <ul className="flex space-x-8">
                 {navLinks.map((link) => (
                   <li key={link.name} className="relative group">
@@ -95,13 +96,14 @@ export default function Header() {
 
             {/* ================= MOBILE HAMBURGER ================= */}
             <button
-              className="md:hidden"
+              className="lg:hidden text-white"
               onClick={() => setIsOpen(!isOpen)}
             >
-              {isOpen ? "X" : "Menu"}
+              {isOpen ? "X" : <MenuIcon size={28} color="#fff" />}
             </button>
+
             <button
-              className={`hamburger md:hidden ${isOpen ? "active" : ""}`}
+              className={`hamburger lg:hidden ${isOpen ? "active" : ""}`}
               onClick={() => setIsOpen(!isOpen)}
               aria-label="Toggle Menu"
             >
@@ -113,17 +115,8 @@ export default function Header() {
         </div>
 
         {/* ================= MOBILE DRAWER ================= */}
-        <div className={`fixed top-0 right-0 h-full w-100 shadow-lg transform transition-transform duration-300 md:hidden z-50
+        <div className={`fixed top-0 right-0 h-full w-100 shadow-lg transform transition-transform duration-300 lg:hidden z-50
                 ${isOpen ? "translate-x-0" : "translate-x-full"}`}>
-          {/* Drawer Header */}
-          {/* <div className="flex items-center justify-between px-4 h-20">
-            <Link href="/" onClick={() => setIsOpen(false)}>
-              <Image src={logo} alt="Liaisonbank" width={120} />
-            </Link>
-            <button onClick={openNav}>Open Menu</button>
-          </div> */}
-
-          {/* Drawer Menu */}
           <ul className="submenu flex flex-col p-4 space-y-4 d-none">
             {navLinks.map((link) => (
               <li key={link.name}>
@@ -235,13 +228,6 @@ export default function Header() {
           </div>
         </div>
 
-        {/* ================= OVERLAY ================= */}
-        {/* {isOpen && (
-          <div
-            className="burger-menu fixed inset-0 bg-black bg-opacity-10 md:hidden"
-            onClick={() => setIsOpen(false)}
-          />
-        )} */}
       </header>
       <div className={`search-popup ${isActive ? 'active' : 'inActive'}`}>
         <button type="button" className="search-popup-close" onClick={closePopup}><i className="fas fa-times"></i>✕</button>

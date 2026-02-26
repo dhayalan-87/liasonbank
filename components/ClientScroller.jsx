@@ -12,6 +12,7 @@ const ClientScroller = () => {
                 pauseOnHover={true}
                 blurBorders={false}
                 blurBorderColor="#fff"
+                direction="right"   // ✅ KEY CHANGE
             >
                 {clientImageName.map((name, index) => (
                     <Slider.Slide key={index}>

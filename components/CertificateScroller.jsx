@@ -27,7 +27,7 @@ function CertificateScroller() {
     arrows: false,
     dots: true,
     infinite: true,
-    slidesToShow: 4,
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     speed: 800,
@@ -43,6 +43,13 @@ function CertificateScroller() {
       },
       {
         breakpoint: 768, // Mobile
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 600, // Mobile
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
