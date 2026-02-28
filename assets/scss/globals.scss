@@ -2026,7 +2026,7 @@ header {
           counter-increment: item;
           position: relative;
           margin-bottom: 5px;
-          border: 1px solid #ddd;
+          border: 1px solid #ef7f1a;
           animation: fadeIn 0.5s ease forwards;
           &::before {
             content: counter(item, decimal-leading-zero) " ";
@@ -2046,7 +2046,7 @@ header {
           &:hover {
             filter: brightness(1.1);
             cursor: pointer;
-            background: $primary-color;
+            background: linear-gradient(0deg, #be2a2a -86.4%, #ef7f1a 94.15%);
             color: #fff;
             &::before{
               color:white;
@@ -2108,17 +2108,13 @@ header {
 
       .view-btn {
         padding: 12px 35px;
-        background-color: $primary-color; // Uses your variable
+        background: linear-gradient(0deg, #be2a2a -86.4%, #ef7f1a 94.15%);
         color: white;
         border: none;
         font-weight: 600;
         cursor: pointer;
         transition: background 0.3s ease;
         border-radius: 4px;
-
-        &:hover {
-          filter: brightness(0.9);
-        }
       }
     }
   }
