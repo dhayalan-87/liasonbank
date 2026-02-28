@@ -484,6 +484,11 @@ Retrieved 2026-02-27, License - CC BY-SA 3.0
 ::-webkit-scrollbar-thumb {
     background: #ef7f1a
 }​
+html {
+  margin:0;
+  padding:0;
+  overflow: hidden;
+}
 
 html body {
   font-family: var(--font-family);
@@ -552,6 +557,10 @@ body.home {
   .page-header {
     height: calc(100vh - 10vh);
     min-height: 90vh;
+    .inner-header{
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
   }
 }
 
@@ -561,6 +570,9 @@ body:not(.home) {
     height: 50vh;
     max-height: 400px;
     min-height: 220px;
+    @media (max-width: 1024px) {
+         max-height: 250px;
+      }
   }
 }
 
@@ -588,7 +600,7 @@ body:not(.home) {
       position: relative;
       overflow: hidden;
       display: block;
-      padding: 200px 0 120px;
+      padding: 7.71rem 0;
       z-index: 1;
       ol.breadcrumb.justify-content-center {
       li {
@@ -944,6 +956,9 @@ header {
           font-size: var(--font-size);
           color: rgb(255, 255, 255);
           text-decoration: none;
+        }
+        button{
+          font-size: var(--font-size);
         }
       }
     }
