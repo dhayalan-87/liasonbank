@@ -56,30 +56,30 @@ export default function OngoingLiaisonbankPage() {
                     </tr>
                   </thead>
                   <tbody>
-                    <tr><td>1</td><td>Anubhav Restaurants</td><td>Fort</td></tr>
-                    <tr><td>2</td><td>South Indian Restaurants</td><td>Fort</td></tr>
-                    <tr><td>3</td><td>National Hindu Hotel</td><td>Fort</td></tr>
+                    <tr><td>1</td><td>Amar Fruit Juice Centre</td><td>Vile Parle(W)</td></tr>
+                    <tr><td>2</td><td>Amber Restaurant</td><td>Bandra(W)</td></tr>
+                    <tr><td>3</td><td>Anubhav Restaurants</td><td>Fort</td></tr>
                     <tr><td>4</td><td>Durga Bar and Restaurant</td><td>Andheri (E)</td></tr>
-                    <tr><td>5</td><td>Saifee Hospital</td><td>Charni Road</td></tr>
-                    <tr><td>6</td><td>Amar Fruit Juice Centre</td><td>Vile Parle(W)</td></tr>
-                    <tr><td>7</td><td>Amber Restaurant</td><td>Bandra(W)</td></tr>
-                    <tr><td>8</td><td>Urban Tadka</td><td>Malad (W)</td></tr>
-                    <tr><td>9</td><td>Hotel Silver Inn</td><td>Andheri (E)</td></tr>
-                    <tr><td>10</td><td>Shree Ambe</td><td>Andheri (E)</td></tr>
-                    <tr><td>11</td><td>Omkar Altamount</td><td>Malad</td></tr>
-                    <tr><td>12</td><td>Sunbeam Gurukurpa Developer</td><td>Vile Parle(E)</td></tr>
-                    <tr><td>13</td><td>Raheja Legend Condominium</td><td>Worli</td></tr>
+                    <tr><td>5</td><td>Grand Pallazo</td><td>Dadar</td></tr>
+                    <tr><td>6</td><td>Hotel Silver Inn</td><td>Andheri (E)</td></tr>
+                    <tr><td>7</td><td>National Hindu Hotel</td><td>Fort</td></tr>
+                    <tr><td>8</td><td>Sea Kunal Corporation Pvt Ltd</td><td>Colaba</td></tr>
+                    <tr><td>9</td><td>Shree Ambe</td><td>Andheri (E)</td></tr>
+                    <tr><td>10</td><td>South Indian Restaurants</td><td>Fort</td></tr>
+                    <tr><td>11</td><td>Urban Tadka</td><td>Malad (W)</td></tr>
+                    <tr><td>12</td><td>Kalpataru Magnus</td><td>Bandra East</td></tr>
+                    <tr><td>13</td><td>Lodha Bellavue</td><td>Byculla</td></tr>
                     <tr><td>14</td><td>Lodha Crown</td><td>Thane</td></tr>
-                    <tr><td>15</td><td>Sugan Heights</td><td>Grand Road</td></tr>
-                    <tr><td>16</td><td>Palai Tower</td><td>Goregaon</td></tr>
-                    <tr><td>17</td><td>Grand Pallazo</td><td>Dadar</td></tr>
-                    <tr><td>18</td><td>VCA Square</td><td>Dadar</td></tr>
-                    <tr><td>19</td><td>Kalpataru Magnus</td><td>Bandra East</td></tr>
-                    <tr><td>20</td><td>Lodha Bellavue</td><td>Byculla</td></tr>
-                    <tr><td>21</td><td>Saat Rasta properties pvt ltd</td><td>Byculla</td></tr>
-                    <tr><td>22</td><td>Gundavali Co-operative Housing society LTD.</td><td>Andheri</td></tr>
-                    <tr><td>23</td><td>Our select state bank of India supervising co-op HSG society</td><td>Bandra</td></tr>
-                    <tr><td>24</td><td>Sea Kunal Corporation Pvt Ltd</td><td>Colaba</td></tr>
+                    <tr><td>15</td><td>Raheja Legend Condominium</td><td>Worli</td></tr>
+                    <tr><td>16</td><td>Saifee Hospital</td><td>Charni Road</td></tr>
+                    <tr><td>17</td><td>Omkar Altamount</td><td>Malad</td></tr>
+                    <tr><td>18</td><td>Saat Rasta properties pvt ltd</td><td>Byculla</td></tr>
+                    <tr><td>19</td><td>Gundavali Co-operative Housing society LTD.</td><td>Andheri</td></tr>
+                    <tr><td>20</td><td>Our select state bank of India supervising co-op HSG society</td><td>Bandra</td></tr>
+                    <tr><td>21</td><td>Palai Tower</td><td>Goregaon</td></tr>
+                    <tr><td>21</td><td>Sugan Heights</td><td>Grand Road</td></tr>
+                    <tr><td>22</td><td>Sunbeam Gurukurpa Developer</td><td>Vile Parle(E)</td></tr>
+                    <tr><td>23</td><td>VCA Square</td><td>Dadar</td></tr>
                   </tbody>
                 </table>
               </div>

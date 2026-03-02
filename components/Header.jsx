@@ -79,13 +79,8 @@
                               {link.submenu.map((sub) => (
                                 <li key={sub.name} className="flex items-center p-2 border-b border-gray-50 hover:bg-[#ef7f1a] group/item transition-colors">
                                   <Link href={sub.href} className="flex items-center w-full">
-                                    {/* Client Name */}
                                     <span className="font-medium text-gray-800 group-hover/item:text-white transition-colors">
                                       {sub.name}
-                                    </span>
-                                    {/* Location Pushed to Right */}
-                                    <span className="ml-auto text-xs uppercase tracking-wider text-gray-400 group-hover/item:text-orange-100">
-                                      {sub.location}
                                     </span>
                                   </Link>
                                 </li>
