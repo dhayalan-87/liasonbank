@@ -10,8 +10,17 @@ const navLinks = [
   { 
     name: "Our Services", 
     submenu: [
-      { name: "Licensing", href: ""},
-      { name: "Liaisoning", href: ""}
+      { name: "AMC", href: "" },
+      { name: "Pest Control", href: "" },
+      { name: "Licensing", href: "" },
+      { name: "Liaisoning", href: "" },
+      { name: "Equipment Solution Department ( ESD )", href: "" },
+      { name: "Electrical Execution, Compliance & Maintenance Services ( EECM )", href: "" },
+      { name: "Fire & Safety Systems and Compliance Solutions ( FSSCS )", href: "" },
+      { name: "Integrated Licensing & Compliance Solutions ( ILCS )", href: "" },
+      { name: "Integrated Liaisoning, Approvals & Compliance Solutions ( ILACS )", href: "" },
+      { name: "Piped Natural Gas (Png) Services & Regulatory Compliance ( PNGRC )", href: "" },
+
     ]
   },  
   { name: "Process", href: "/process-liaison-bank" },
