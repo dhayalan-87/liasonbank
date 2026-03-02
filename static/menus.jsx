@@ -10,10 +10,16 @@ const navLinks = [
   { 
     name: "Our Services", 
     submenu: [
-      { name: "Residential", href: "/residential" },
-      { name: "For Garment Manufacturing Units", href: "/forgarment-manufacturing-units" },
-      { name: "Hospitals & Nursing Homes", href: "/hospitalNursinghome" },
-      { name: "Hospitality", href: "/hospitality" },
+      { name: "Licensing", href: ""},
+      { name: "Liaisoning", href: ""},
+      { name: "Food And Beverage License Services", href: ""},
+      { name: "License And Permit Services", href: ""},
+      { name: "PNG Pipelining Services", href: ""},
+      { name: "Fire Safety and Prevention Services", href: ""},
+      { name: "Liaison Architect Services", href: ""},
+      { name: "Electrical Audit and AMC Services", href: ""},
+      { name: "Welding Services", href: ""},
+      { name: "Interior Design Services", href: ""},
     ]
   },  
   { name: "Process", href: "/process-liaison-bank" },
