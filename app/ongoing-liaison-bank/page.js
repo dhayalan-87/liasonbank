@@ -16,7 +16,7 @@ export default function OngoingLiaisonbankPage() {
       arr.slice(i * size, i * size + size)
     );
   };
-  const chunks = chunkArray(onGoingList, 4);
+  const chunks = chunkArray(onGoingList, 8);
   return (
     <>
       <div className="page-header">
@@ -56,7 +56,7 @@ export default function OngoingLiaisonbankPage() {
       </div>
       <section className="container py-5">
         <div className="row justify-content-center text-center">
-          <div className="col-12">
+          <div className="col-12 pb-4">
             <p className="text-end">Total Ongoing <AnimatedCounter endValue={23} />+ Projects </p>
             <div className="table-container d-none">
               <table className="project-table border table-bordered w-75 mx-auto ongoing">
@@ -129,7 +129,11 @@ export default function OngoingLiaisonbankPage() {
         <div className="project-grid">
           {chunks.map((chunk, index) => (
             <div className="grid-item" key={index}>
-              <ul>
+              <ul className="item-list">
+                <li className="header-row">
+                  <strong className="item-name">Client Name</strong>
+                  <strong className="item-price">Location</strong>
+                </li>
                 {chunk.map((item, i) => (
                   <li key={i}>
                     <span className="item-name">{item.clientName}</span>

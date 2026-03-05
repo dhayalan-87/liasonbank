@@ -38,7 +38,7 @@ export default function Header() {
 
   return (
     <>
-      <header className={`fixed w-full z-50 transition-all ${isSticky ? "sticky" : ""}`}>
+      <header className={`fixed w-full z-50 py-2 transition-all ${isSticky ? "sticky" : ""}`}>
         <div className="max-w-7xl mx-auto">
           <nav key={pathname} className="flex items-center justify-between h-16">
             
