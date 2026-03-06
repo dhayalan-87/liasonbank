@@ -77,21 +77,22 @@ export default function Header() {
                           {link.name}
                         </span>
                       )}
-                      {link.submenu && (
-                        <ul className="absolute left-0 mt-2 w-[300px] bg-white shadow-2xl border-t-4 border-[#ef7f1a] 
-                                      opacity-0 invisible group-hover:opacity-100 group-hover:visible 
-                                      transition-all duration-300 custom-counter-list">
-                          {link.submenu.map((sub) => (
-                            <li key={sub.name} className="flex items-center p-2 border-b border-gray-50 hover:bg-[#ef7f1a] group/item transition-colors">
-                              <Link href={sub.href} className="flex items-center w-full">
-                                <span className="font-medium text-gray-800 group-hover/item:text-white transition-colors">
-                                  {sub.name}
-                                </span>
-                              </Link>
-                            </li>
-                          ))}
-                        </ul>
-                      )}
+
+                     {link.submenu && (
+                          <div className="mega-menu">
+                            <div className="mega-menu-inner">
+                              <div className="mega-menu-grid">
+                                {link.submenu.map((sub) => (
+                                  <div key={sub.name} className="mega-menu-item">
+                                    <Link href={sub.href}>
+                                      <h4>{sub.name}</h4>
+                                    </Link>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          </div>
+                        )}
                     </li>
                   )
                 })}

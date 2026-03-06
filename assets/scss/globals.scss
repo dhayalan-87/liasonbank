@@ -995,9 +995,9 @@ header {
     position: relative;
     ul {
       // Variables for easy branding updates
-    $primary-orange: #ef7f1a;
-    $hover-white: #ffffff;
-    $mobile-breakpoint: 1280px;
+      $primary-orange: #ef7f1a;
+      $hover-white: #ffffff;
+      $mobile-breakpoint: 1280px;
       &.custom-counter-list {
         // counter-reset: service-item;
         li {
@@ -1041,6 +1041,72 @@ header {
           color:white;
           font-size: var(--font-size);
         }
+        &.has-submenu {
+          position: relative;
+          &:hover {
+            .mega-menu {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+        .mega-menu {
+          opacity: 0;
+          visibility: hidden;
+          background: linear-gradient(0deg, #be2a2a -86.4%, #ef7f1a 94.15%);
+          width: 100vw;
+          margin: 0 auto;
+          transition: all .3s;
+          position: absolute;
+          top: 84px;
+          right: 0;
+          left: -70.5vw;
+        }
+        .mega-menu-inner {
+          color: #fff;
+          max-width: 1280px;
+          margin: auto;
+          padding: 2rem 0;
+        }
+        .mega-menu-heading {
+          text-align: center;
+          margin-bottom: 40px;
+          h3 {
+            font-size: 28px;
+            font-weight: 600;
+          }
+          p {
+            opacity: 0.8;
+          }
+        }
+        .mega-menu-grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 20px;
+          display: grid;
+        }
+        .mega-menu-item {
+          border-right: 1px solid rgba(255,255,255,0.2);
+          padding-right: 20px;
+          h4 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+          }
+          p {
+            font-size: 14px;
+            opacity: 0.85;
+            margin-bottom: 15px;
+          }
+          a {
+            color: white;
+            text-decoration: none;
+            display: block;
+          }
+        }
+        .mega-link {
+          font-size: 14px;
+          border-bottom: 1px solid #fff;
+        }
+
         &.has-submenu:hover {
           ul{
             visibility: visible !important;
@@ -1055,22 +1121,6 @@ header {
       color: rgb(0, 0, 0);
     }
     
-    ul.submenu {
-      display: none;
-      position: absolute;
-      // background: white;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-
-      &.open {
-        display: block;
-      }
-
-      @media (max-width: 768px) {
-        position: relative;
-      }
-    }
   }
   .menu-icon {
     width: 120px;
