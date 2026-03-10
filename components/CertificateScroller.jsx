@@ -16,17 +16,12 @@ export default function CertificateScroller() {
 
   /* ------------------ FANCYBOX ------------------ */
   useEffect(() => {
-    Fancybox.bind(
-      '.slick-slide:not(.slick-cloned) [data-fancybox="gallery"]',
-      {
-        Thumbs: false,
-        Toolbar: { display: ["close"] },
-      }
-    );
+    Fancybox.bind('[data-fancybox="gallery"]', {
+      Thumbs: false,
+      Toolbar: { display: ["close"] },
+    });
 
-    return () => {
-      Fancybox.destroy();
-    };
+    return () => Fancybox.destroy();
   }, []);
 
   /* ------------------ SLIDER SETTINGS ------------------ */
@@ -34,7 +29,7 @@ export default function CertificateScroller() {
     arrows: false,
     dots: true,
     infinite: true,
-    slidesToShow: 3, // Desktop
+    slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
     speed: 800,
@@ -43,24 +38,21 @@ export default function CertificateScroller() {
 
     responsive: [
       {
-        breakpoint: 1023, // MD & SM
+        breakpoint: 1023,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1,
         },
       },
     ],
 
     beforeChange: () => {
-      const slider = sliderRef.current;
-
-      // 🚫 Ignore resize & manual triggers
-      if (!slider?.innerSlider?.state?.autoplaying) return;
-
       slideCountRef.current += 1;
 
-      // ⏸ Pause after every 2 autoplay scrolls
       if (slideCountRef.current % 2 === 0) {
+        const slider = sliderRef.current;
+
+        if (!slider) return;
+
         slider.slickPause();
 
         setTimeout(() => {
