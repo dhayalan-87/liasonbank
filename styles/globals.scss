@@ -591,8 +591,8 @@ ul {
 /* HOME PAGE ONLY */
 body.home {
   .page-header {
-    height: calc(100vh - 10vh);
-    min-height: 90vh;
+    height: calc(100vh - 5vh);
+    min-height: 95vh;
     background-color: $page-header;
     .inner-header{
       margin: 0 auto;
