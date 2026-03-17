@@ -13,7 +13,13 @@ const services = [
 const OurServices = () => {
   return (
     <div className="service-type grid-wrapper">
-        {services.map((service) => (
+      <div className="grid-item">Item 1</div>
+      <div className="grid-item">Item 2</div>
+      <div className="grid-item">Item 3</div>
+      <div className="grid-item">Item 4</div>
+      <div className="grid-item">Item 5</div>
+      <div className="grid-item">Item 6</div>
+        {/* {services.map((service) => (
           <Link href={`/services/${service.slug}`} key={service.id} className="service-card">
             <div className="image-wrapper">
               <Image 
@@ -25,10 +31,10 @@ const OurServices = () => {
             </div>
             <div className="content-overlay">
               <h3>{service.title}</h3>
-              {/* <span className="learn-more">View Details →</span> */}
+               <span className="learn-more">View Details →</span> 
             </div>
           </Link>
-        ))}
+        ))} */}
     </div>
   );
 };
