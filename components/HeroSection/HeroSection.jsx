@@ -26,7 +26,7 @@ export default function HeroSection() {
 
     return (
         <section className="hero-section">
-            <div className="hero-grid">
+            <div className="hero-grid container">
                 {/* LEFT CONTENT */}
                 <div className="hero-content pt-4">
                     <h1 className="hero-title">

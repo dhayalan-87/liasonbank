@@ -12,6 +12,7 @@ export default function Header() {
   const pathname = usePathname();
   const [isSticky, setIsSticky] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false);
   const [openSubmenu, setOpenSubmenu] = useState(null); // Mobile SUbmenu
   const [isScrolled, setIsScrolled] = useState(false);
   const [isActive, setIsActive] = useState(false);
@@ -45,7 +46,7 @@ export default function Header() {
                     <li
                       key={link.name}
                       className={`${hasSubmenu ? "has-submenu" : ""}`}
-                      data-aos="fade-down"
+                      data-aos={!hasSubmenu ? "fade-down" : undefined}
                       data-aos-delay={index * 100}
                       data-aos-duration="800"
                     >
@@ -60,10 +61,8 @@ export default function Header() {
                       )}
 
                       {hasSubmenu && (
-                        <div className="mega-menu" data-lenis-prevent
-                          onMouseEnter={() => document.body.style.overflow = "hidden"}
-                          onMouseLeave={() => document.body.style.overflow = "auto"}>
-                          <div className="mega-menu-inner">
+                        <div className={`mega-menu ${menuOpen ? "active" : ""}`}>
+                          <div className="mega-menu-inner container">
 
                             {/* TOP CARDS */}
                             <div className="mega-top">

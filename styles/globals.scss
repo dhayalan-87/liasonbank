@@ -1113,16 +1113,7 @@ header {
             background: $primary-color;
             transition: all 0.32s ease-out;
           }
-          
         }
-        // &:hover > a
-        // {
-        //   &:after{
-        //     left: 0;
-        //     width: 100%;
-        //   }
-        // } 
-          
         button{
           color:$text-color;
           font-size: var(--font-size);
@@ -1143,30 +1134,30 @@ header {
           }
         }
         .mega-menu {
+          position: fixed; // 🔥 key change
+          top: 80px; // match your header height
+          left: 0;
+          width: 100vw; // full screen width
           opacity: 0;
           visibility: hidden;
-          // background: linear-gradient(0deg, #be2a2a -86.4%, #ef7f1a 94.15%);
-          background: #fff;
-          width: calc(100vw - 6vw);
-          margin: 0 auto;
-          transition: all .3s;
-          position: fixed;
-          top: 84px;
-          left: -65vw;
-          right: 0;
-          border-right: 2px solid $primary-color;
-          border-bottom: 2px solid $primary-color;
-          border-left: 2px solid $primary-color;
-          // height: calc(100vh - 120px);
+          transition: all 0.3s ease;
+          z-index: 98;
+          &.active{
+            opacity: 1;
+            visibility: visible;
+          }
         }
         .mega-menu-inner {
-          color: #fff;
-          max-width: 100%;
-          margin: auto;
-          padding: 1rem 2rem;
+          max-width: 1400px; // control content width
+          margin: 0 auto; // center horizontally
+          padding: 2rem;
+          background: #fff;
+
           display: grid;
-          // grid-template-columns: repeat(4, 1fr);
-          // gap: 20px;
+          gap: 20px;
+
+          border: 2px solid $primary-color;
+          border-top: none;
         }
         .mega-menu-heading {
           text-align: center;
@@ -1449,15 +1440,15 @@ body:has(.has-submenu:hover) .menu-overlay {
 }
 .menu-overlay {
   position: fixed;
-  top: 0;
+  top: 80px;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.55);
+  width: 100vw;
+  height: calc(100vh - 80px);
+  background: rgba(0, 0, 0, 0.4);
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease;
-  z-index: 12;
+  transition: 0.3s;
+  z-index: 97;
 }
 @keyframes zoom-in-out {
   0% {
