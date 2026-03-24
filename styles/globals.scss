@@ -618,6 +618,7 @@ body:not(.home) {
   }
 }
 
+
 .page-header {
   position: relative;
   text-align: center;
@@ -3438,6 +3439,9 @@ body:has(.has-submenu:hover) .menu-overlay {
   
 }
 
+.testimonial{
+  position: relative;
+}
 
 .careers {
   .section-title {
@@ -3546,9 +3550,10 @@ body:has(.has-submenu:hover) .menu-overlay {
           counter-increment: item;
           position: relative;
           margin-bottom: 1.2rem;
-          border: 1px solid #ef7f1a;
+          border: 1px solid $primary-color;
           text-align: left;
           animation: fadeIn 0.5s ease forwards;
+           border-radius: 1rem;
           &::before {
             content: counter(item, decimal-leading-zero) " ";
             font-weight: 500;
@@ -3567,7 +3572,9 @@ body:has(.has-submenu:hover) .menu-overlay {
           &:hover {
             filter: brightness(1.1);
             cursor: pointer;
-            background: linear-gradient(0deg, #be2a2a -86.4%, #ef7f1a 94.15%);
+            // background: linear-gradient(0deg, #be2a2a -86.4%, #ef7f1a 94.15%);
+            background: $secodary-bg-color;
+            
             color: #fff;
             &::before{
               color:white;
@@ -3616,15 +3623,17 @@ body:has(.has-submenu:hover) .menu-overlay {
           counter-increment: item;
           position: relative;
           margin-bottom: 1.2rem;
-          border: 1px solid #ef7f1a;
+          border: 1px solid $secodary-bg-color;
+          border-radius: 2px;
           text-align: left;
           animation: fadeIn 0.5s ease forwards;
+          border-radius: 1rem;
           &::before {
             content: counter(item, decimal-leading-zero) " ";
             font-weight: 500;
             font-size: 43px;
             color: rgba(0, 0, 0, 0);
-            -webkit-text-stroke: 1px $primary-color;
+            -webkit-text-stroke: 1px $secodary-bg-color;
             position: absolute;
             top: 50%;
             line-height: 1;
@@ -3637,7 +3646,8 @@ body:has(.has-submenu:hover) .menu-overlay {
           &:hover {
             filter: brightness(1.1);
             cursor: pointer;
-            background: linear-gradient(0deg, #be2a2a -86.4%, #ef7f1a 94.15%);
+            // background: linear-gradient(0deg, #be2a2a -86.4%, #ef7f1a 94.15%);
+            background: $secodary-bg-color;
             color: #fff;
             &::before{
               color:white;
@@ -3718,6 +3728,34 @@ body:has(.has-submenu:hover) .menu-overlay {
       }
   }
 }
+
+
+@keyframes animatedBackground {
+  0% { background-position: 0 0; }
+  50% { background-position: -300px 0; }
+  100% { background-position: 0 0; }
+}
+@-moz-keyframes animatedBackground {
+  0% { background-position: 0 0; }
+  50% { background-position: -300px 0; }
+  100% { background-position: 0 0; }
+}
+@-webkit-keyframes animatedBackground {
+  0% { background-position: 0 0; }
+  50% { background-position: -300px 0; }
+  100% { background-position: 0 0; }
+}
+@-ms-keyframes animatedBackground {
+  0% { background-position: 0 0; }
+  50% { background-position: -300px 0; }
+  100% { background-position: 0 0; }
+}
+@-o-keyframes animatedBackground {
+  0% { background-position: 0 0; }
+  50% { background-position: -300px 0; }
+  100% { background-position: 0 0; }
+}
+
 
 @-webkit-keyframes fadeIn {
     from { opacity: 0; }
@@ -3966,6 +4004,158 @@ body:has(.has-submenu:hover) .menu-overlay {
     
   }
 }
+ $color_1: transparent;
+$color_2: red;
+$color_3: #fff;
+.contact-section{
+ 
+  a{
+    color:$primary-color;
+      text-decoration: none;
+
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  .block-title{
+    h3 {
+      text-align: left;
+      font-weight:600;
+    }
+    h5{
+      text-align: left;
+    }
+  }
+.contact-form {
+		#contact {
+			display: block;
+			.form-group {
+				display: block;
+				position: relative;
+				margin-bottom: 35px;
+				span {
+					width: 100%;
+					line-height: 54px;
+					position: absolute;
+					left: 0;
+					top: 0;
+					padding: 0 20px;
+					z-index: 0;
+					-webkit-transition: 0.25s ease-in-out;
+					-moz-transition: 0.25s ease-in-out;
+					-ms-transition: 0.25s ease-in-out;
+					-o-transition: 0.25s ease-in-out;
+					transition: 0.25s ease-in-out;
+          left: 0.2rem;
+          text-align: left;
+				}
+				span.label-up {
+					font-size: 13px;
+					line-height: 16px;
+					top: -20px;
+					font-weight: 500;
+				}
+				input[type=text] {
+					background: none;
+					position: relative;
+					z-index: 2;
+          width: 100%;
+          height: 54px;
+          border: 1px solid #eee;
+          padding: 0 20px;
+				}
+        input::placeholder {
+          color: transparent;
+        }
+        textarea::placeholder {
+          color: transparent;
+        }
+				input {
+					&:focus {
+						+ {
+							span {
+								font-size: 13px;
+								line-height: 16px;
+								top: -20px;
+								font-weight: 500;
+							}
+						}
+					}
+				}
+				textarea {
+					background: none;
+					position: relative;
+					z-index: 2;
+          width: 100%;
+          height: 160px;
+          border: 1px solid #eee;
+          padding: 15px 20px;
+					&:focus {
+						+ {
+							span {
+								font-size: 13px;
+								line-height: 16px;
+								top: -20px;
+								font-weight: 500;
+							}
+						}
+					}
+				}
+				label.error {
+					color: $color_2;
+					margin-top: 5px;
+					margin-bottom: 0;
+					font-weight: 600;
+					font-size: 13px;
+				}
+			}
+		}
+		#success {
+			display: none;
+			float: left;
+			background: green;
+			color: $color_3;
+		}
+		#error {
+			display: none;
+			float: left;
+			background: red;
+			color: $color_3;
+		}
+		.alert {
+			border: none;
+			border-radius: 0;
+			padding: 20px 30px;
+		}
+	}
+}
+button[type=submit] {
+    height: 54px;
+    border: none;
+    background: $primary-color;
+    color: #fff;
+    padding: 0 30px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+input {
+	&::placeholder {
+		color: $color_1;
+	}
+}
+textarea {
+	&::placeholder {
+		color: $color_1;
+	}
+}
+.error-message {
+	background: red;
+	color: $color_3;
+	font-size: 0.85em;
+	margin-top: 4px;
+}
+
 
 
 

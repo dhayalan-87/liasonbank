@@ -4,10 +4,18 @@ import Link from "next/link";
 import useBodyClass from '@/components/useBodyClass'; // Adjust path as needed
 // import PageTitleWave from '@/components/PageTitleWave';
 // import PageTitleWaveLeft from '@/components/PageTitleWaveLeft';
+import MapSection from '@/components/MapSection'
+import ContactForm from "@/components/ContactForm";
 
 
 export default function ContactusLiaisonbankPage() {
    useBodyClass('contactus');
+     const handleSubmit = (event) => {
+      event.preventDefault(); // Prevents default form submission behavior
+
+      // Perform your custom validation logic here
+      console.log('Custom validation and form submission logic goes here.');
+    };
   return (
     <>
      <div className="page-header">
@@ -46,9 +54,82 @@ export default function ContactusLiaisonbankPage() {
           {/* <PageTitleWaveLeft /> */}
         </div>
       </div>
-      <section className="container py-5">
-        <div className="row justify-content-center text-center">
-         
+      <section className="container  pt-4">
+        <div className="contact-section">
+          <div className="row justify-content-center text-center">
+             <div className="section-title pb-4"  data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+                <h3>Feel free to reach out to us at any time if you have questions. constraints. </h3>
+              </div>
+
+              <div className="col-lg-4 col-md-12 col-sm-12 mb-4">
+                <div className="p-3 bg-light card"  data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                  <p><strong>Khar (HQ)</strong> <br/>Office No-1 & 2, Ground Floor, <br/>New Apollo CHS,
+                  Next to Farmer Cafe & <br/>Blue Tokai Coffee, 14th Road,
+                  Khar West, <br/>Mumbai-400052.<br/>
+                  <strong>Landmark</strong> - Domino’s Pizza,14th Road.</p>
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-12 col-sm-12 mb-4">
+                <div className="p-3 bg-light card"  data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
+                  <p><strong>Bandra </strong> <br/>
+                  1103/ 1104, 11th Floor,
+                  Com. Building Esperanza, Plot No. 198,
+                  Bandra West, Mumbai – 400050.</p>
+
+                  <p><strong>Juhu </strong> <br/>A-1 Asha Colony, Juhu Road, Near Sea Princess Hotel,
+                  Santacruz (W), Mumbai-400054</p>
+                </div>
+              </div>
+              <div className="col-lg-4 col-md-12 col-sm-12 mb-4">
+                <div className="p-3 bg-light card"  data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+                  <p className="pb-4"><strong>Phone</strong> <br/> 
+                    <Link href="tel:+91 91364 43852" > (+91) 91364 43852</Link> / &nbsp; 
+                    <Link href="tel:+91 9321709258" >(+91) 9321709258</Link>
+                  <br/>
+                  </p>
+                  <p className="pb-4"><strong>Email</strong> <br/> 
+                  <Link href="mailto:ceo.desk@liaisonbank.com" >ceo.desk@liaisonbank.com</Link></p>
+                </div>
+              </div>
+
+              <div className="col-lg-6 col-md-6 col-sm-12 pt-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
+                <MapSection />
+              </div>
+              <div className="col-lg-6 col-md-6 col-sm-12 pt-4">
+                <div className="block-title">
+                  <h3>Leave Us A Message</h3>
+                  <h5>Get in touch! We look forward to hearing from you.</h5>
+                </div>
+                  <div className="contact-form py-4">
+                    <ContactForm />
+                    <form id="contact" className="d-none"  onSubmit={handleSubmit} noValidate>
+                      <div className="form-group">
+                        <label htmlFor="name" className="d-none">Your name</label>
+                        <input type="text" name="name" id="name" required="" placeholder="Your name" title="Your name" />
+                        <span>Your name</span>
+                      </div>
+                      <div className="form-group">
+                        <label htmlFor="email" className="d-none">Your e-mail</label>
+                        <input type="text" name="email" id="email" required="" placeholder="Your e-mail" title="Your e-mail" />
+                        <span>Your e-mail</span>
+                      </div>
+                      <div className="form-group">
+                        <label htmlFor="subject" className="d-none">Subject</label>
+                        <input type="text" name="subject" id="subject" required="" placeholder="Subject" title="Subject" />
+                        <span>Subject</span>
+                      </div>
+                      <div className="form-group">
+                        <label htmlFor="message" className="d-none">Your message</label>
+                        <textarea name="message" id="message" required="" placeholder="Your message" title="Your message"></textarea>
+                        <span>Your message</span>
+                      </div>
+                      <div className="form-group">
+                        <button id="submit" type="submit" name="submit">Submit</button>
+                      </div>
+                    </form>
+                  </div>
+              </div>
+          </div>
         </div>
       </section>
     </>

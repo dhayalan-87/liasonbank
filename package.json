@@ -31,7 +31,9 @@
     "react-redux": "^9.2.0",
     "react-slick": "^0.31.0",
     "sass": "^1.97.3",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "sweetalert2": "^11.26.24",
+    "sweetalert2-react-content": "^5.1.2"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
