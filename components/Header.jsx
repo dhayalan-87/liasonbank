@@ -114,7 +114,7 @@ export default function Header() {
                                                   <span>{item?.name}</span>
                                                 </Link>
 
-                                                {item?.pdf && (
+                                                {/* {item?.pdf && (
                                                   <a
                                                     href={item.pdf}
                                                     download
@@ -124,7 +124,7 @@ export default function Header() {
                                                   >
                                                     <Image src={pdfIcon} alt="Download PDF" width={16} height={16} />
                                                   </a>
-                                                )}
+                                                )} */}
 
                                               {/* SUBMENU */}
                                               {item?.children && (

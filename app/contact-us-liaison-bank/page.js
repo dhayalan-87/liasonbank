@@ -63,7 +63,8 @@ export default function ContactusLiaisonbankPage() {
 
               <div className="col-lg-4 col-md-12 col-sm-12 mb-4">
                 <div className="p-3 bg-light card"  data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
-                  <p><strong>Khar (HQ)</strong> <br/>New Apollo CHSL,
+                  <p><strong>Khar (HQ)</strong> <br/>
+                  New Apollo CHSL,
                   Beside Blue Tokai Coffee, <br/>14th Road,
                   Khar West, Mumbai-400052.<br/>
                   <strong>Landmark</strong> - Domino’s Pizza,14th Road.</p>

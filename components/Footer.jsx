@@ -117,16 +117,16 @@ export default function Footer() {
             </h4>
 
             <p className="mb-3"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-              Plot No. 466, New Apollo CHS, 14th Road, near Blue Tokai Coffee,
-              Khar West,<br/> Mumbai – 400052
+              New Apollo CHSL,
+              Beside Blue Tokai Coffee, <br/>14th Road,
+              Khar West, Mumbai-400052.
             </p>
 
             <div className="mb-3 flex items-center gap-2"  data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
               {/* <Image src="/phone.png" width={25} height={25} alt="Call" /> */}
               <Image src="/phone-call-white-icon.png" width={30} height={30} alt="Call" />
-              <a href="tel:+919136443852">+91 91364 43852</a>
-              <span>/</span>
-              <a href="tel:+919321709258">932170 9258</a>
+              <Link href="tel:+91 91364 43852" >  97694 58515</Link> / &nbsp; 
+              <Link href="tel:+91 91364 43852" >  91371 28401</Link> 
             </div>
 
             <div className="mb-3 flex items-center gap-2" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
