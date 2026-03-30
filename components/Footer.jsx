@@ -153,13 +153,17 @@ export default function Footer() {
       <ScrollToTopButton />
 
       {/* Marquee */}
-      <div className="marquee-branch flex items-center bg-white justify-between">
-        <div className="comingsoontitle pl-4 w-1/2">
-          <p>Our new branch is opening soon</p>
-          <div className="arrow arrow-right"></div>
-        </div>
-        <div className="location">
-          <NewLauncb />
+      <div className="container-fluid theme-bg">
+        <div className="row theme-bg">
+          <div className="marquee-branch flex items-center bg-white justify-between">
+            <div className="comingsoontitle pl-4 w-1/3">
+              <p>Our new service</p>
+              <div className="arrow arrow-right"></div>
+            </div>
+            <div className="location">
+              <NewLauncb />
+            </div>
+          </div>
         </div>
       </div>
 

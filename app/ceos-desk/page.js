@@ -7,7 +7,7 @@ import useBodyClass from '@/components/useBodyClass'; // Adjust path as needed
 // import PageTitleWaveLeft from '@/components/PageTitleWaveLeft';
 
 export default function CeosDeskPage() {
-  useBodyClass('ceo');
+  useBodyClass('ceo-desk');
   return (
     <>
       <div className="page-header">
@@ -48,8 +48,8 @@ export default function CeosDeskPage() {
       </div>
       <section className="container py-5">
         <div className="row justify-content-center text-center">
-          <div className="section-title px-5" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-            <h3>“It’s not about waiting for things to fall into place, it’s about what you make of yourself.”</h3>
+          <div className="section-title px-5 w-75 theme-secondary" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+            <h3 className="pt-4">“It’s not about waiting for things to fall into place, it’s about what you make of yourself.”</h3>
             <h5 className="text-end">— Deva Biradar</h5>
             
           </div>

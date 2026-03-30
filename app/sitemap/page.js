@@ -3,12 +3,14 @@
 import Link from "next/link";
 import useBodyClass from '@/components/useBodyClass'; // Adjust path as needed
 import PageTitleWave from '@/components/PageTitleWave';
+import {navLinks} from "@/lib/data/menus";
+import SitemapDiagram from "@/components/SiteMap/page";
 // import PageTitleWaveLeft from '@/components/PageTitleWaveLeft';
 
 
 // const AboutUsLiaisonPage = () => {
   export default function SitemapLiaisonPage() {
-  useBodyClass('sitemap');
+  useBodyClass('sitemaps');
   return (
     <>
       <div className="page-header">
@@ -49,7 +51,7 @@ import PageTitleWave from '@/components/PageTitleWave';
       </div>
       <section className="container py-5">
         <div className="row justify-content-center text-center">
-         
+          <SitemapDiagram navLinks={navLinks} />
         </div>
       </section>
     </>

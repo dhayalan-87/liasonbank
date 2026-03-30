@@ -30,7 +30,7 @@ export default function HeroSection() {
                 {/* LEFT CONTENT */}
                 <div className="hero-content pt-4">
                     <h1 className="hero-title">
-                        {["Trust,", "Compliance,", "Excellence"].map((word, i) => (
+                        {["Efficient, ", "Reliable, ", "Hassle-Free Solutions"].map((word, i) => (
                             <span className="mask" key={i}>
                                 <span
                                 ref={(el) => (wordsRef.current[i] = el)}
@@ -52,7 +52,7 @@ export default function HeroSection() {
 
                     </div>
                     <div className="hero-desc">
-                        <h3> Opportunities for You</h3>
+                        <h3> Streameline Your License Acquisitions</h3>
                     </div>
 
                 </div>
