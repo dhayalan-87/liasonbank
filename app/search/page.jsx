@@ -3,10 +3,11 @@
 export const dynamic = "force-dynamic";
 
 import Link from "next/link";
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import useBodyClass from "@/components/useBodyClass";
 
-export default function SearchPage() {
+function SearchContent() {
   useBodyClass("search");
 
   const searchParams = useSearchParams();
@@ -21,25 +22,18 @@ export default function SearchPage() {
               <div className="row justify-content-center text-center">
                 <div className="col-lg-10">
                   <div className="theme-breadcrumb-box">
-                    <h1 data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-                      Search
-                    </h1>
+                    <h1>Search</h1>
 
                     <nav aria-label="breadcrumb" className="page-breadcrumb">
-                      <ol
-                        className="breadcrumb justify-content-center"
-                        data-aos="fade-up"
-                        data-aos-duration="1000"
-                        data-aos-delay="200"
-                      >
+                      <ol className="breadcrumb justify-content-center">
                         <li className="breadcrumb-item">
                           <Link href="/">
-                            <i className="bi bi-house-door me-1" aria-hidden="true"></i>
+                            <i className="bi bi-house-door me-1"></i>
                             Home
                           </Link>
                         </li>
 
-                        <li className="breadcrumb-item active" aria-current="page">
+                        <li className="breadcrumb-item active">
                           Search Result of {query || "All"}
                         </li>
                       </ol>
@@ -58,8 +52,16 @@ export default function SearchPage() {
           <div>
             Search result for: <strong>{query || "All"}</strong>
           </div>
-        </div>
+        </div> 
       </section>
     </>
+  );
+}
+
+export default function SearchPage() {
+  return (
+    <Suspense fallback={<div className="container py-5 text-center">Loading...</div>}>
+      <SearchContent />
+    </Suspense>
   );
 }
