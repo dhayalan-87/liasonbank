@@ -4,11 +4,9 @@ import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { gsap } from "gsap";
 import Image from "next/image";
-// import SearchRotator from "@/components/SearchRotator";
 import ScrollUpList from "@/components/ScrollUpList";
 import { searchPhrases, suggestions } from "@/lib/data/menus";
 import HeroSlider from '@/components/HeroSection/HeroSlider';
-
 // import rightsideBanner from "@/public/complaince.png"
 
 export default function HeroSection() {
