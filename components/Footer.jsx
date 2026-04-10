@@ -84,7 +84,7 @@ export default function Footer() {
             
             // Performance Optimization
             priority={true}    // Logos in headers should load immediately, not lazy-load
-            quality={90}       // Fine-tune compression
+            quality={75}       // Fine-tune compression
             
             // Animation (Ensure AOS is initialized in a useEffect)
             data-aos="fade-up"
