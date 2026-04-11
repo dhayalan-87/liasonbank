@@ -16,7 +16,7 @@ export default function ServicesSection() {
                 />
             </div>
 
-            <div data-aos="fade-left" data-aos-duration="600" data-aos-delay="400">
+            <div>
                 <ServiceContent activeIndex={activeIndex} />
             </div>
         </>

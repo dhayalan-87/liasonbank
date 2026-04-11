@@ -48,7 +48,7 @@ export default function RootLayout({ children }) {
     telephone: "+91-9769458515",
     contactType: "customer service",
     areaServed: "IN",
-    availableLanguage: ["English"]
+    availableLanguage: ["English","Hindi", "Marathi", "Kannada", "Telugu", "Tamil", "Bengali", "Gujarati", "Punjabi", "Malayalam", "Odia", "Assamese"]
   }
 };
   return (

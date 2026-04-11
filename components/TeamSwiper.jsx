@@ -6,34 +6,32 @@ import { A11y } from "swiper/modules";
 import "swiper/css";
 import { teamData } from "@/lib/data/teamData";
 
-// const TEAM = [
-//   { name: "Lydia Schaeffer", role: "Directrice", image: "https://picsum.photos/id/237/600/600" },
-//   { name: "Noa Andrieux", role: "Directeur financier", image: "https://picsum.photos/id/238/600/600" },
-//   { name: "Théo Faure", role: "Chef de projet", image: "https://picsum.photos/id/239/600/600" },
-// ];
 
 function TeamCard({ member }) {
   return (
-    <div className="col-md-6 col-lg-6 mx-auto mb-4">
-      <div className="team-card">
-        
-        <div className="team-content text-end">
-          <h5> {member.name}</h5>
-          <p>{member.designation}</p>
-        </div>
+    <div className="w-full max-w-sm mx-auto">
+      <div className="rounded-2xl text-center shadow-sm hover:shadow-md transition">
 
-        <div className="image">
-          {/* <img src="https://liaisonbank.com/wp-content/uploads/2024/10/Mahadev.jpg" alt="team"> */}
-           <Image
+        {/* Image Wrapper */}
+        <div className="relative w-full h-[260px] rounded-xl overflow-hidden bg-gray-200">
+          <Image
             src={member.image}
             alt={member.name}
             fill
-            sizes="300px"
-            className="object-contain"
-            priority={false}
-        />
+            className="object-cover object-[50%_10%]"
+            sizes="(max-width: 768px) 100vw, 300px"
+          />
         </div>
 
+        {/* Content */}
+        <div className="mt-4 pb-4">
+          <h5 className="text-lg font-semibold text-gray-900">
+            {member.name}
+          </h5>
+          <p className="text-sm text-center text-gray-500">
+            {member.designation}
+          </p>
+        </div>
       </div>
     </div>
   );
@@ -41,14 +39,14 @@ function TeamCard({ member }) {
 
 export default function TeamSection() {
   return (
-    <div className="row">
+    <div className="w-full px-4 py-8">
+
       {/* Mobile Carousel */}
       <div className="md:hidden">
         <Swiper
           modules={[A11y]}
           spaceBetween={16}
           slidesPerView={1.2}
-          aria-label="Team members"
         >
           {teamData.map((member, index) => (
             <SwiperSlide key={index}>
@@ -59,7 +57,7 @@ export default function TeamSection() {
       </div>
 
       {/* Desktop Grid */}
-      <div className="hidden gap-6 md:grid md:grid-cols-2 lg:grid-cols-2">
+      <div className="hidden md:grid grid-cols-2 lg:grid-cols-4 gap-6">
         {teamData.map((member, index) => (
           <TeamCard key={index} member={member} />
         ))}

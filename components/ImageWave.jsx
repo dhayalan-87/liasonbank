@@ -8,10 +8,11 @@ export default function ImageWave({
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 288 288"
+      viewBox="0 0 420 420"
       width={width}
       height={height}
       className={className}
+      preserveAspectRatio="xMidYMid meet"
     >
       <defs>
         <linearGradient
@@ -34,7 +35,10 @@ export default function ImageWave({
         </linearGradient>
       </defs>
 
-      <path fill="url(#imagewave)">
+      <path
+        fill="url(#imagewave)"
+        transform="translate(-30 -60) scale(1.65, 1.7)"
+      >
         <animate
           attributeName="d"
           dur="5s"

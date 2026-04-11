@@ -55,7 +55,7 @@ const Home = () => {
             />
           </div> */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="p-4 d-flex justify-content-end letbanner" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+            <div className="p-4 d-flex justify-content-end letbanner" data-aos="fade-right" data-aos-duration="600" data-aos-delay="100">
               <Image
                 src={welcomeImg}
                 width={500}
@@ -66,22 +66,25 @@ const Home = () => {
             </div>
             <div className=" p-4">
               <div className='section-title'>
-                <h6 data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">Welcome to, Liaison Bank  </h6>
-                <h3 data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">Your Partner in
+                <h6 data-aos="fade-left" data-aos-duration="600" data-aos-delay="100">Welcome to, Liaison Bank  </h6>
+                <h3 data-aos="fade-left" data-aos-duration="600" data-aos-delay="200">Your Partner in
                   <span className='theme-color'>Licensing</span> and
                   <span className='theme-color'>Liaisoning</span>
                 </h3>
               </div>
-              <div className='home-abt'data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+              <div className='home-abt'>
+                <p data-aos="fade-left" data-aos-duration="600" data-aos-delay="300">Bridging the gap between the complicated regulatory frameworks and your business goals, we act as an interface for all your statutory requirements. As your dedicated licensing and liaisoning partner, we specialize in managing the intricate legalities and bureaucratic uncertainties that often stall business momentum. Our expertise ensures smoother operations, allowing you to channelize your energy into core priorities and other important business objectives.</p>
+                <p data-aos="fade-left" data-aos-duration="600" data-aos-delay="400">We commit to deliver a seamless, and reliable framework that offers absolute clarity and operational confidence. By taking care of the complexities of industrial licensing, permits, and government liaisoning, we transform a traditionally slow process into a smooth, efficient experience. While we handle the administrative hurdles, you stay empowered to focus on strategic growth and achieving your business milestones with the certainty that your legal standing is in expert hands.</p>
+                {/* <p>By entrusting us with your regulatory approvals and government relations, you accelerate the transition between policy and progress.</p> */}
                 {/* <h2 className="text-xl font-semibold mb-2">Column 2</h2> */}
-                <p>We take care of the intricacies and uncertainties, allowing you to redirect your energy towards your core priorities and business objectives. This ensures a smoother and more efficient experience, providing you with the peace of mind to concentrate on what matters most to your success.</p>
-                <p>Our commitment is to deliver a seamless and reliable experience that brings clarity, confidence, and peace of mind. With our expertise supporting your operations, you can move forward with assurance—concentrating on strategic growth and achieving your business objectives while we handle the rest.</p>
+                {/* <p>We take care of the intricacies and uncertainties, allowing you to redirect your energy towards your core priorities and business objectives. This ensures a smoother and more efficient experience, providing you with the peace of mind to concentrate on what matters most to your success.</p>
+                <p>Our commitment is to deliver a seamless and reliable experience that brings clarity, confidence, and peace of mind. With our expertise supporting your operations, you can move forward with assurance—concentrating on strategic growth and achieving your business objectives while we handle the rest.</p> */}
                 <hr />
-                <h5 className='ceo-slogan'>&quot;It&apos;s not about waiting for things to fall into place, it&apos;s about what you make of yourself.&quot;</h5>
+                <h5 className='ceo-slogan'  data-aos="fade-left" data-aos-duration="600" data-aos-delay="500">&quot;It&apos;s not about waiting for things to fall into place, it&apos;s about what you make of yourself.&quot;</h5>
               </div>
               <div className='d-flex flex-wrap justify-content-between align-items-center'>
                 <div className='author-meta d-flex flex-wrap align-items-center'>
-                  <div className='col-auto author-img' data-aos="zoom-in" data-aos-duration="600" data-aos-delay="100">
+                  <div className='col-auto author-img' data-aos="zoom-in" data-aos-duration="600" data-aos-delay="600">
                     <Image
                       src={ceoImg}
                       width={60}
@@ -92,8 +95,8 @@ const Home = () => {
                     />
                   </div>
                   <div className='col-auto'>
-                    <h4 className="author-title" data-aos="fade-left" data-aos-duration="600" data-aos-delay="100">Deva Biradar</h4>
-                    <span className="author-desc" data-aos="fade-left" data-aos-duration="600" data-aos-delay="200">Chief Executive Officer</span>
+                    <h4 className="author-title" data-aos="fade-left" data-aos-duration="600" data-aos-delay="700">Deva Biradar</h4>
+                    <span className="author-desc" data-aos="fade-left" data-aos-duration="600" data-aos-delay="800">Chief Executive Officer</span>
                   </div>
                 </div>
                 <Link
@@ -101,7 +104,7 @@ const Home = () => {
                   className="themeht-btn primary-btn d-flex align-items-center mr-2 mt-4"
                   data-aos="fade-left"
                   data-aos-duration="700"
-                  data-aos-delay="400"
+                  data-aos-delay="900"
                 >
                   CEO&apos;s DESK&nbsp;
 

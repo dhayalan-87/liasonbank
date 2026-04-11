@@ -1535,7 +1535,6 @@ body:has(.has-submenu:hover) .menu-overlay {
           // font-weight: 700;
           line-height: 1.2;
           margin-bottom: 20px;
-
           span {
             color: white;
           }
@@ -1889,7 +1888,7 @@ body:has(.has-submenu:hover) .menu-overlay {
           color: $text-color;
         }
       }
-
+      
       /* responsive */
 
       @media (max-width: 992px) {
@@ -2020,6 +2019,10 @@ body:has(.has-submenu:hover) .menu-overlay {
           // -webkit-text-fill-color: #0000;
           // -webkit-background-clip: text;
         }
+      }
+      p{
+        line-height: 1.6;
+        margin-bottom: 1rem;
       }
     }
     .author-meta {
@@ -2468,8 +2471,13 @@ body:has(.has-submenu:hover) .menu-overlay {
         overflow: hidden;
         background: #fff;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         /* Wrapper that animates */
+        p{
+          font-size: 1.1rem;
+          color: $secodary-bg-color;
+          margin-bottom: 1rem;
+        }
         .content-animate {
           // display: grid;
           // grid-template-columns: 1fr 1fr;
@@ -4538,58 +4546,21 @@ body:has(.has-submenu:hover) .menu-overlay {
       font-weight: 600;
     }
     .team-card {
-      margin-top: 2.2rem;
-      display: flex;
-      align-items: center;
-      margin-bottom: 40px;
-      min-width: 40rem;
-      // overflow: hidden;
-      .team-content {
-        padding: 0 1.4rem 0 1rem;
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        min-height: 110px;
-        h5 {
-          color: $primary-color;
+      .image {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 0.5rem;
+      }
+      .team-info {
+        h4 {
+          font-size: 1.25rem;
+          color: $heading-color;
           font-weight: 600;
-          margin-bottom: 0;
         }
         p {
-          margin: 0;
-          color: $heading-color;
-        }
-        &::before {
-          content: "";
-          position: absolute;
-          top: -50%;
-          right: 2%;
-          width: 4px;
-          height: 200%;
-          background: $primary-color;
-          transform: skew(-15deg);
-          z-index: 0;
-        }
-      }
-      .image {
-        position: relative;
-        transform: skew(-15deg);
-        overflow: hidden;
-        img {
-          object-fit: contain;
-          filter: grayscale(1);
-          display: block;
-          transform: skew(15deg) scale(2) translateX(-0.2rem) translateY(2.1rem); /* 👈 move down */
-          width: 220px !important;
-          height: 220px !important;
-          position: relative !important;
-          transition: filter 0.5s ease-in-out linear;
-        }
-        &:hover {
-          img {
-            filter: grayscale(0);
-            transition: filter 0.5s ease-in-out linear;
-          }
+          color: $text-color;
+          font-size: 0.95rem;
         }
       }
 
@@ -5084,7 +5055,7 @@ footer {
 
   /* Desktop: 4 columns at 1024px+ */
   @media (min-width: 1024px) {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
   }
   button{
     margin: 0 0.2rem;

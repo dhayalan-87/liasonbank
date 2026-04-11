@@ -2,8 +2,8 @@
 
 import { useEffect, useRef, useState, useCallback } from 'react';
 import Image from 'next/image';
-import HeroWave from '@/components/HeroWave';
-// import ImageWave from '@/components/ImageWave';
+import ImageWave from '@/components/ImageWave';
+// import HeroWave from '@/components/HeroWave';
 
 const slides = [
   {
@@ -72,8 +72,9 @@ export default function HeroSlider() {
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
         >
-           <div className="img-bg-shape absolute right-0 top-0 w-1/1 h-full">
-              <HeroWave />
+           <div className="img-bg-shape top-0 w-1/1 h-full">
+            <ImageWave />
+              {/* <HeroWave /> */}
            </div>
             {/* SHAPE (ONLY ONCE) */}
             {/* <div className="img-bg-shape" aria-hidden="true"> */}
