@@ -117,16 +117,26 @@ export default function AboutUsLiaisonPage() {
               <div className="our-story-text" data-aos="fade-left" data-aos-duration="600" data-aos-delay="300">
               <h3>Our Story</h3>  
               <p >
-                In 2017, the company was incorporated as DBRE INDIA, and in 2019, it was officially registered as Liaison Bank. Our head office is located at plot 466, New Apollo CHSL, beside Blue Tokai Cafe 14th Road Khar West Mumbai 52.</p>
+              Founded in 2017 as DBRE India and officially established as Liaison Bank in 2019, our journey began with a clear vision - to simplify business licensing services, regulatory approvals, and compliance management in India. Headquartered in Mumbai, Liaison Bank office is strategically located at Plot 466, New Apollo CHSL, 14th Road, Khar West, beside Blue Tokai Cafe, enabling us to stay closely connected with key regulatory authorities and business hubs.
+              </p>
               <p >
-                Liaison Bank consists of a dedicated team of professionals, featuring in-house architects, interior designers, project managers, and safety supervisors. The team operates round the clock with proper approvals from local authorities to meet project timelines efficiently.</p>
-                </div>
+              Over the years, Liaison Bank has evolved into a trusted partner for companies seeking seamless support with licenses, permits, and government liaison services across India. Our team comprises experienced architects, interior designers, project managers, and safety supervisors who work collaboratively to manage complex business licensing, documentation, and compliance requirements.
+              </p>
+              <p>
+                With round-the-clock operations and strong coordination with local authorities, we ensure faster approvals, reduced delays, and smooth execution of projects, helping businesses stay compliant and operational without hassle.
+              </p>
+              </div>
               <div className="our-commitment-text"  data-aos="fade-left" data-aos-duration="600" data-aos-delay="300">
               <h3>Our Commitment</h3>  
               <p >
-                With over 16 years of experience, we have managed numerous projects, encompassing educational facilities, medical institutions, food and beverage establishments, and residential complexes.</p>
+              With over 16+ years of proven industry experience in licensing, liaisoning, and regulatory compliance services, Liaison Bank has successfully managed and executed a diverse portfolio of projects across multiple sectors. Our expertise spreads starting from educational institutions, healthcare facilities, food and beverage establishments, commercial spaces to residential developments, ensuring seamless approvals, documentation, and end-to-end licensing support. 
+              </p>
               <p >
-                These projects are primarily concentrated in Mumbai, including ongoing work at renowned establishments such as Jaslok Hospital, Saifee Hospital, Podar Education Institute, and well-known brands like Domino’s Pizza, Pizza Hut, Social’s, Smoke House Deli, Wine Villa Cafe, Persian Darbar, 5 Spice, Piramal Realty, Godrej Trees, Godrej Two, Supreme Art Veda, Ananad Apartment, Pooja Casa, and Orchid Enclave.</p>
+              Our projects are primarily concentrated in Mumbai where we have built a strong reputation for delivering efficient licensing solutions, government approvals, and compliance management services. Liaison Bank is proud to be associated with prestigious organizations and well-known establishments, including Jaslok Hospital, Saifee Hospital, Podar Education Network, Domino’s Pizza, Pizza Hut, Social, Smoke House Deli, Wine Villa Café, Persian Darbar, 5 Spice, and leading real estate developers such as Piramal Realty, Godrej Properties (Godrej Trees & Godrej Two), Supreme Art Veda, Anand Apartment, Pooja Casa, and Orchid Enclave.
+              </p>
+              <p>
+                Our commitment lies in providing reliable, timely, and hassle-free licensing and liaison services, helping businesses navigate complex regulatory frameworks while ensuring full compliance with local authorities. By combining industry expertise, strong government relations, and a client-centric approach, we continue to deliver results that support business growth and operational excellence.
+              </p>
             </div>
             </div>           
           </div>
