@@ -4930,6 +4930,7 @@ footer {
       padding: 0;
       padding-left: 5rem;
       font-size: 1.2rem;
+      width: 350px;
        @media (max-width: 1023px) {
          padding:0;
         }
@@ -4961,6 +4962,7 @@ footer {
     .comingsoontitle {
       width: 100% !important;
       p {
+        width:100%;
         margin: 0 auto;
       }
     }
