@@ -10,19 +10,19 @@ const slides = [
     id: 1,
     title: 'We Build Smart Solutions',
     desc: 'Modern digital experiences for your business growth.',
-    img: '/images/hero1.png',
+    img: '/images/Alishaikh_png.png',
   },
   {
     id: 2,
     title: 'Creative & Innovative',
     desc: 'Design-driven development for better UX.',
-    img: '/images/hero2.png',
+    img: '/images/Ayesha_amc.webp',
   },
   {
     id: 3,
     title: 'Future Ready Technology',
     desc: 'Scalable and high-performance applications.',
-    img: '/images/hero3.png',
+    img: '/images/kalpita_liaisoning.png',
   },
 ];
 
