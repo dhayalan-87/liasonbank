@@ -13,7 +13,7 @@ import useFancybox from '@/components/useFancybox';
 import TestimonialSlider  from '@/components/TestimonialSlider';
 import CertificateScroller from '@/components/CertificateScroller';
 import HeroSection  from "@/components/HeroSection/HeroSection";
-import OurServices from '@/components/OurServices/page';
+import FAQAccordion from "@/components/Faqs/FAQAccordion";
 
 const Home = () => {
   useBodyClass('home');
@@ -122,24 +122,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="ourservices">
-        <div className="container mx-auto py-5">
-          <div className="section-title">
-            <h3 data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">Our Services</h3>
-            <h5 data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">We bring our services to multiple sectors and create customised solutions for diverse set of business needs.</h5>
-          </div>
-          <div className='col-12 mx-auto' data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-            <OurServices/>
-          </div>
-          <div className='col-3 mx-auto d-none' data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
-            <Link href="/" data-aos="flip-in" data-aos-duration="600" data-aos-delay="100" className="themeht-btn primary-btn d-flex justify-content-center align-item-center mr-2">View Details &nbsp;
-                  <svg xmlns="http://www.w3.org" width="22" height="22" fill="currentColor" className="bi bi-arrow-right" viewBox="0 0 16 16">
-                    <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8" />
-                  </svg>&nbsp;
-                </Link>
-          </div>
-        </div>
-      </section>
+      
 
       <section className="weprovide">
         <div className="container mx-auto  py-5 bg-white">
@@ -195,7 +178,7 @@ const Home = () => {
             <h3  data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">Frequently ask Questions</h3>
           </div>
           <div>
-
+                  <FAQAccordion />
           </div>
         </div>
       </section>
