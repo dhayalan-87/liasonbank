@@ -15,6 +15,7 @@
 $home-bg-color:#f6f3ef;
 $primary-color: #262626;
 $heading-color:#808080;
+$main-bg-color: #808080;
 $text-color:#808080;
 $secodary-bg-color:#262626;
 $footer-bg-color: #262626;
@@ -5009,7 +5010,7 @@ footer {
   margin: 0;
   padding: 0;
   font-family: var(--font-barlow);
-  background: $footer-bg-color1;
+  background: $main-bg-color;
   border-top-left-radius: 5rem;
   border-top-right-radius: 5rem;
   will-change: margin-bottom;

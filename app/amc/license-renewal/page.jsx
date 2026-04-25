@@ -2,7 +2,7 @@
 import Link from "next/link";
 import useBodyClass from '@/components/useBodyClass'; // Adjust path as needed
 
-export default function AMCPage() {
+export default function LRPage() {
   useBodyClass('license-renewal');
   return (
     <>
