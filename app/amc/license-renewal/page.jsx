@@ -3,7 +3,7 @@ import Link from "next/link";
 import useBodyClass from '@/components/useBodyClass'; // Adjust path as needed
 
 export default function AMCPage() {
-  useBodyClass('amc');
+  useBodyClass('license-renewal');
   return (
     <>
       <div className="page-header">
@@ -14,7 +14,7 @@ export default function AMCPage() {
               <div className="row justify-content-center text-center">
                 <div className="col-lg-10">
                   <div className="theme-breadcrumb-box">
-                    <h1 data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">AMC</h1>
+                    <h1 data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">License Renewal</h1>
 
                     <nav aria-label="breadcrumb" className="page-breadcrumb">
                       <ol className="breadcrumb justify-content-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
@@ -29,7 +29,7 @@ export default function AMCPage() {
                           className="breadcrumb-item active"
                           aria-current="page"
                         >
-                          AMC
+                          License Renewal
                         </li>
                       </ol>
                     </nav>
@@ -66,8 +66,8 @@ export default function AMCPage() {
           <div className="section-title" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
             <h3>Overview </h3>
           </div>
-          <div className="container table-responsive py-5" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
-            <table className="mx-auto w-75 table table-bordered table-hover" >
+          <div className="container table-responsive py-2" data-aos="fade-up" data-aos-duration="600" data-aos-delay="500">
+            <table className="mx-auto table table-bordered table-hover mx-auto w-100 w-md-75" >
               <thead className="thead-dark">
                 <tr>
                   <th scope="col">License Renewal Process</th>

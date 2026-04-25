@@ -16,6 +16,7 @@ export default function EnquiryForm() {
   });
 
   const [countryDropdownOpen, setCountryDropdownOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const services = [
     "Fire Safety",
@@ -28,7 +29,6 @@ export default function EnquiryForm() {
     "Pest Control",
   ];
 
-  /* ✅ Prevent page/body scroll when country dropdown opens */
   useEffect(() => {
     if (countryDropdownOpen) {
       document.body.style.overflow = "hidden";
@@ -69,16 +69,17 @@ export default function EnquiryForm() {
     if (!form.email_id.trim()) {
       errors.push("Email ID is required");
     } else if (!/\S+@\S+\.\S+/.test(form.email_id)) {
-      errors.push("Enter a valid Email ID");
+      errors.push("Enter valid Email ID");
     }
 
-    if (!form.type_of_services)
+    if (!form.type_of_services) {
       errors.push("Please select Type of Service");
+    }
 
     return errors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const errors = validateForm();
@@ -97,34 +98,70 @@ export default function EnquiryForm() {
       return;
     }
 
-    console.log(form);
+    try {
+      setLoading(true);
 
-    Swal.fire({
-      icon: "success",
-      title: "Enquiry Submitted",
-      text: "Your enquiry has been submitted successfully.",
-      confirmButtonColor: "#000",
-    });
+      /* Send phone WITHOUT + sign for Frappe validation */
+      const payload = {
+        ...form,
+        phone_number: form.phone_number.replace(/\+/g, "").replace(/\s/g, ""),
+      };
 
-    resetForm();
+      const response = await fetch("/api/enquiry", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.status !== "error") {
+        Swal.fire({
+          icon: "success",
+          title: "Enquiry Submitted",
+          text: "Your enquiry has been submitted successfully.",
+          confirmButtonColor: "#000",
+        });
+
+        resetForm();
+      } else {
+        Swal.fire({
+          icon: "error",
+          title: "Failed",
+          text: data.error || data.message || "Something went wrong.",
+          confirmButtonColor: "#000",
+        });
+      }
+    } catch (error) {
+      Swal.fire({
+        icon: "error",
+        title: "Server Error",
+        text: "Unable to submit enquiry.",
+        confirmButtonColor: "#000",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleDiscard = () => {
     Swal.fire({
-      title: "Discard Changes?",
+      title: "Reset Form?",
       text: "All entered details will be removed.",
       icon: "warning",
       showCancelButton: true,
       confirmButtonColor: "#000",
       cancelButtonColor: "#d33",
-      confirmButtonText: "Yes, Discard",
+      confirmButtonText: "Yes, Reset",
     }).then((result) => {
       if (result.isConfirmed) {
         resetForm();
 
         Swal.fire({
           icon: "success",
-          title: "Discarded",
+          title: "Reset",
           text: "Form has been cleared.",
           confirmButtonColor: "#000",
         });
@@ -134,9 +171,7 @@ export default function EnquiryForm() {
 
   return (
     <form onSubmit={handleSubmit}>
-      {/* Grid Fields */}
       <div className="grid md:grid-cols-2 gap-2">
-        {/* Company Name */}
         <div>
           <label className="block mb-2">
             Company Name <span className="text-red-500">*</span>
@@ -146,11 +181,10 @@ export default function EnquiryForm() {
             name="company_name"
             value={form.company_name}
             onChange={handleChange}
-            className="w-full form-control px-2 py-1 rounded-xl bg-gray-100 outline-none focus:ring-2 focus:ring-black"
+            className="w-full form-control px-2 py-1 rounded-xl bg-gray-100"
           />
         </div>
 
-        {/* Contact Person */}
         <div>
           <label className="block mb-2">
             Contact Person <span className="text-red-500">*</span>
@@ -160,34 +194,49 @@ export default function EnquiryForm() {
             name="contact_person"
             value={form.contact_person}
             onChange={handleChange}
-            className="w-full form-control px-2 py-1 rounded-xl bg-gray-100 outline-none focus:ring-2 focus:ring-black"
+            className="w-full form-control px-2 py-1 rounded-xl bg-gray-100"
           />
         </div>
 
-        {/* Phone Number */}
         <div>
           <label className="block mb-2">
             Phone Number <span className="text-red-500">*</span>
           </label>
+          <PhoneInput
+            country={"in"}                 // Default India
+            onlyCountries={["in"]}        // Only India
+            disableDropdown={true}        // Hide country selector
+            countryCodeEditable={false}   // Disable editing +91
 
+            value={form.phone_number}
+            onChange={(phone) =>
+              setForm({
+                ...form,
+                phone_number: phone,
+              })
+            }
+
+            inputClass="!w-full !pl-14"
+            containerClass="!w-full"
+          />
+{/* 
           <PhoneInput
             country={"in"}
             value={form.phone_number}
             onChange={(phone) =>
-              setForm({ ...form, phone_number: phone })
+              setForm({
+                ...form,
+                phone_number: phone,
+              })
             }
-            enableSearch={true}
-            searchPlaceholder="Search country..."
+            enableSearch
             onFocus={() => setCountryDropdownOpen(true)}
             onBlur={() => setCountryDropdownOpen(false)}
             inputClass="!w-full !pl-14"
-            buttonClass="!rounded-l"
             containerClass="!w-full"
-            dropdownClass="!rounded !shadow-lg"
-          />
+          /> */}
         </div>
 
-        {/* Email */}
         <div>
           <label className="block mb-2">
             Email ID <span className="text-red-500">*</span>
@@ -197,11 +246,10 @@ export default function EnquiryForm() {
             name="email_id"
             value={form.email_id}
             onChange={handleChange}
-            className="w-full form-control px-2 py-1 rounded-xl bg-gray-100 outline-none focus:ring-2 focus:ring-black"
+            className="w-full form-control px-2 py-1 rounded-xl bg-gray-100"
           />
         </div>
 
-        {/* Type of Service */}
         <div className="md:col-span-2">
           <label className="block mb-2">
             Type of Services <span className="text-red-500">*</span>
@@ -211,9 +259,10 @@ export default function EnquiryForm() {
             name="type_of_services"
             value={form.type_of_services}
             onChange={handleChange}
-            className="w-full form-control px-2 py-1 rounded-xl bg-gray-100 outline-none focus:ring-2 focus:ring-black"
+            className="w-full form-control px-2 py-1 rounded-xl bg-gray-100"
           >
             <option value="">Select Service</option>
+
             {services.map((item, index) => (
               <option key={index} value={item}>
                 {item}
@@ -223,7 +272,6 @@ export default function EnquiryForm() {
         </div>
       </div>
 
-      {/* Message */}
       <div className="mt-6">
         <textarea
           rows="3"
@@ -231,25 +279,25 @@ export default function EnquiryForm() {
           value={form.enquiry_details}
           onChange={handleChange}
           placeholder="Message..."
-          className="w-full form-control px-2 py-1 rounded-xl bg-gray-100 outline-none resize-none focus:ring-2 focus:ring-black"
+          className="w-full form-control px-2 py-1 rounded-xl bg-gray-100"
         />
       </div>
 
-      {/* Buttons */}
       <div className="flex justify-end gap-4 mt-8">
         <button
           type="button"
           onClick={handleDiscard}
-          className="px-6 py-3 rounded-xl bg-gray-100 hover:bg-gray-200 transition"
+          className="px-6 py-3 rounded-xl bg-gray-100"
         >
           Reset
         </button>
 
         <button
           type="submit"
-          className="px-10 py-3 rounded-xl bg-black text-white hover:bg-gray-800 transition"
+          disabled={loading}
+          className="px-10 py-3 rounded-xl bg-black text-white"
         >
-          Save
+          {loading ? "Saving..." : "Save"}
         </button>
       </div>
     </form>
